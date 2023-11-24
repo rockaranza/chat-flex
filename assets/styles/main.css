@@ -1,0 +1,214 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Variables del proyecto */
+:root {
+  --withe: #fff;
+  --platinum: #E8EBE4;
+  --gray: #BEC1BB;
+  --blueBell: #A491D2;
+  --soap: #CDC3E6;
+  --paleLavander: #D4DCFF;
+  --darkJungle: #1B1F21;
+  --outerSpace: #444749;
+  --oldSilver: #828485;
+
+  --txt-lg: 4.5rem;
+  --txt-md: 1.6rem;
+  --txt-sm: 1.4rem;
+  --txt-xs: 1rem;
+
+  --ico-size: 2rem;
+}
+
+.chatContainer {
+  max-width: 42.5em;
+}
+
+/* Usuario */
+.chatBoxUser {
+  height: 7rem;
+  padding: 0.6rem 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: solid 1px var(--gray);
+}
+.userData {
+  display: flex;
+  align-items: center;
+}
+.imgUserChat {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  border-radius: 50%;
+  border: 2px solid var(--gray);
+}
+.nameChat {
+  font-size: var(--txt-md);
+  font-weight: 400;
+  color: var(--darkJungle);
+}
+.state {
+  font-size: var(--txt-xs);
+  color: var(--oldSilver);
+}
+.iconsUserContainer {
+  width: 8rem;
+  display: flex;
+  justify-content: space-between;
+}
+.iconUserChat {
+  font-size: var(--ico-size);
+  color: var(--oldSilver);
+}
+.icoContainer {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icoContainer:hover {
+  border-radius: 50%;
+  background-color: var(--platinum);
+}
+
+/* Nuevo Chat */
+.newChat {
+  /* width: 42.5rem; */
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 1px var(--gray);
+}
+.btn {
+  width: 20rem;
+  height: 4rem;
+  background-color: var(--blueBell);
+  border: none;
+  color: var(--withe);
+  font-size: var(--txt-md);
+}
+.btn:hover {
+  background-color: var(--soap);
+}
+
+/* Contacto */
+.chatBox {
+  height: 8.5rem;
+  padding: 0.6rem 3rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: solid 1px var(--gray);
+}
+.chatBox:hover {
+  background-color: var(--platinum);
+}
+.chatData {
+  display: flex;
+  align-items: center;
+  width: 30rem;
+
+}
+.imgChat {
+  width: 6rem;
+  height: 6rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+  border: 2px solid var(--gray);
+}
+.lastMsg {
+  font-size: var(--txt-sm);
+  color: var(--outerSpace);
+}
+
+/* Mensajes */
+.msgContainer {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--gray);
+  background-color: var(--platinum);
+}
+.msgInitialContainer {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.imgMsgInitial {
+  width: 15rem;
+  margin-bottom: 3rem;
+}
+.titleInitial {
+  font-size: 1.8rem;
+  color: var(--darkJungle);
+  font-weight: 400;
+  line-height: 1.5;
+}
+.txtInitial {
+  font-size: var(--txt-md);
+  text-align: center;
+  color: var(--darkJungle);
+  line-height: 1.5;
+  font-weight: 300;
+}
+.boldTxt {
+  font-weight: bold;
+}
+
+
+@media screen and (min-width: 426px) {
+  .chatContainer {
+    max-width: 30em;
+    height: 100vh;
+    overflow: auto;
+  }
+
+  .appView {
+    display: flex;
+  }
+
+  .msgContainer {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .msgInitialContainer {
+    width: 60rem;
+  }
+  
+  .imgMsgInitial {
+    width: 30rem;
+  }
+  
+  .titleInitial {
+    font-size: var(--txt-lg);
+  }
+  
+  .txtInitial {
+    font-size: 1.8rem;
+  }
+}
